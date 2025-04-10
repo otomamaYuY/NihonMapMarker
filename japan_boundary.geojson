@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Japan Bounding Box Expanded"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.4514,
+              19.4253
+            ],
+            [
+              121.4514,
+              46.5572
+            ],
+            [
+              154.2831,
+              46.5572
+            ],
+            [
+              154.2831,
+              19.4253
+            ],
+            [
+              121.4514,
+              19.4253
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

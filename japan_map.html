@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_60ecfd8fdb700f6fc2db33787dd3abb1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_60ecfd8fdb700f6fc2db33787dd3abb1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_60ecfd8fdb700f6fc2db33787dd3abb1 = L.map(
+                "map_60ecfd8fdb700f6fc2db33787dd3abb1",
+                {
+                    center: [36.2048, 138.2529],
+                    crs: L.CRS.EPSG3857,
+                    maxBounds: [[20.0, 122.0], [46.0, 154.0]],
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: true,
+                    zoomAnimation: true,
+                    minZoom: 5,
+                    maxZoom: 12,
+                }
+            );
+            L.control.scale().addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+
+            
+
+        
+    
+            var tile_layer_a66d86b397b304096ae9d356f345a7e7 = L.tileLayer(
+                "https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
+                {"attribution": "\u5730\u56f3\u51fa\u5178\uff1a\u56fd\u571f\u5730\u7406\u9662", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_a66d86b397b304096ae9d356f345a7e7.addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+        function geo_json_baeef3f3c32a42de03860b08d4fd64a7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "gray", "fillColor": "gray", "fillOpacity": 0.8, "weight": 0};
+            }
+        }
+
+        function geo_json_baeef3f3c32a42de03860b08d4fd64a7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_baeef3f3c32a42de03860b08d4fd64a7 = L.geoJson(null, {
+                onEachFeature: geo_json_baeef3f3c32a42de03860b08d4fd64a7_onEachFeature,
+            
+                style: geo_json_baeef3f3c32a42de03860b08d4fd64a7_styler,
+        });
+
+        function geo_json_baeef3f3c32a42de03860b08d4fd64a7_add (data) {
+            geo_json_baeef3f3c32a42de03860b08d4fd64a7
+                .addData(data);
+        }
+            geo_json_baeef3f3c32a42de03860b08d4fd64a7_add({"features": [{"geometry": {"coordinates": [[[180, 90], [180, -90], [-180, -90], [-180, 90], [180, 90]], [[121.4514, 19.4253], [121.4514, 46.5572], [154.2831, 46.5572], [154.2831, 19.4253], [121.4514, 19.4253]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_baeef3f3c32a42de03860b08d4fd64a7.addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_fe0aee5d06af69c4ce969bc3ec52afd8 = L.marker(
+                [45.1382729640585, 142.322226390789],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_2ee544a8edaf5066a910ab2b2fb3160a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fe0aee5d06af69c4ce969bc3ec52afd8.setIcon(icon_2ee544a8edaf5066a910ab2b2fb3160a);
+        
+    
+            marker_fe0aee5d06af69c4ce969bc3ec52afd8.bindTooltip(
+                `<div>
+                     クッチャロ湖（くっちゃろこ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1256aec55bffa49c2eacd05fb6a9596f = L.circle(
+                [45.1382729640585, 142.322226390789],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_26650c7a5dd3bf0690ad287172ba0f80 = L.marker(
+                [45.0523062431073, 141.70759982437],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_d8679720beff92bf2d620040a20e9224 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_26650c7a5dd3bf0690ad287172ba0f80.setIcon(icon_d8679720beff92bf2d620040a20e9224);
+        
+    
+            marker_26650c7a5dd3bf0690ad287172ba0f80.bindTooltip(
+                `<div>
+                     サロベツ原野（さろべつげんや）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_97b3f0b3c5807b9205988db72d43d6dc = L.circle(
+                [45.0523062431073, 141.70759982437],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_856f063330cc8b59b7af569ac0184e2c = L.marker(
+                [43.9371985686141, 144.392040501285],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_bbed7ddefe3f1505fac0ff700504a9ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_856f063330cc8b59b7af569ac0184e2c.setIcon(icon_bbed7ddefe3f1505fac0ff700504a9ec);
+        
+    
+            marker_856f063330cc8b59b7af569ac0184e2c.bindTooltip(
+                `<div>
+                     濤沸湖（とうふつこ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a15a5dfe35aeede9f4731cc638b8f6d9 = L.circle(
+                [43.9371985686141, 144.392040501285],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_4d158836ae11af62fa347708f3d1d38a = L.marker(
+                [43.6998629806957, 141.604245784658],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_a76d3f93fe428d94437d69963ede1295 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4d158836ae11af62fa347708f3d1d38a.setIcon(icon_a76d3f93fe428d94437d69963ede1295);
+        
+    
+            marker_4d158836ae11af62fa347708f3d1d38a.bindTooltip(
+                `<div>
+                     雨竜沼湿原（うりゅうぬましつげん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c15f56af062dd0de746c284a49d17b0d = L.circle(
+                [43.6998629806957, 141.604245784658],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_02270dfd2fbd9b0e6a8c6d01a54ebb15 = L.marker(
+                [43.6047718781693, 145.292553492054],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_b4ce485752e90fecf26989191fc1a25e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_02270dfd2fbd9b0e6a8c6d01a54ebb15.setIcon(icon_b4ce485752e90fecf26989191fc1a25e);
+        
+    
+            marker_02270dfd2fbd9b0e6a8c6d01a54ebb15.bindTooltip(
+                `<div>
+                     野付半島・ 野付湾（のつけはんとう・のつけわん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_331a91a9ec2116f558af4f96ef241863 = L.circle(
+                [43.6047718781693, 145.292553492054],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_fc7146b50f05c54a8475ffab8d42b62f = L.marker(
+                [43.4545044326342, 144.099707084597],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_84a83e62b1b9b3c0909a9a578121dd12 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fc7146b50f05c54a8475ffab8d42b62f.setIcon(icon_84a83e62b1b9b3c0909a9a578121dd12);
+        
+    
+            marker_fc7146b50f05c54a8475ffab8d42b62f.bindTooltip(
+                `<div>
+                     阿寒湖（あかんこ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2d9d24f34a50fad76b767c5394e0c33a = L.circle(
+                [43.4545044326342, 144.099707084597],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_e7770f9adc95f2d9f7d2e0f0af65e840 = L.marker(
+                [43.3326044039187, 141.713215401033],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_3d53c794501e11f67db25877f4876c86 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e7770f9adc95f2d9f7d2e0f0af65e840.setIcon(icon_3d53c794501e11f67db25877f4876c86);
+        
+    
+            marker_e7770f9adc95f2d9f7d2e0f0af65e840.bindTooltip(
+                `<div>
+                     宮島沼（みやじまぬま）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2686636d891181d4ff72e1c68a11ef17 = L.circle(
+                [43.3326044039187, 141.713215401033],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_b27748201d3c6bea95f1068376ee0946 = L.marker(
+                [43.3104870688511, 145.341902349494],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_8c30bc91da48fa1b85335dd977d3573e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b27748201d3c6bea95f1068376ee0946.setIcon(icon_8c30bc91da48fa1b85335dd977d3573e);
+        
+    
+            marker_b27748201d3c6bea95f1068376ee0946.bindTooltip(
+                `<div>
+                     風蓮湖・春国岱（ふうれんこ・しゅんくにたい）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e7b05c2dbfdd879088a8412a93128b55 = L.circle(
+                [43.3104870688511, 145.341902349494],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_c5535a5c5f204be24e4df69d133d482e = L.marker(
+                [43.116601212774, 144.432398526864],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_f1d8e974560132089a2b52b17915c50a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c5535a5c5f204be24e4df69d133d482e.setIcon(icon_f1d8e974560132089a2b52b17915c50a);
+        
+    
+            marker_c5535a5c5f204be24e4df69d133d482e.bindTooltip(
+                `<div>
+                     釧路湿原（くしろしつげん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_858b42ff26bf87b7961db041714b7323 = L.circle(
+                [43.116601212774, 144.432398526864],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_2d6fdfdccee6b17ff8ae329720d329d7 = L.marker(
+                [43.0890922630222, 145.081412817084],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_25bd6546466556307c1cd7690194caba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2d6fdfdccee6b17ff8ae329720d329d7.setIcon(icon_25bd6546466556307c1cd7690194caba);
+        
+    
+            marker_2d6fdfdccee6b17ff8ae329720d329d7.bindTooltip(
+                `<div>
+                     霧多布湿原（きりたっぷしつげん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d2057a451efdf11f8854eed128b0184c = L.circle(
+                [43.0890922630222, 145.081412817084],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_25c279ffd3952f707727035a3da4e463 = L.marker(
+                [43.1084489765145, 144.847192078022],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_cf27ff840b75d78c6ab736dcca7731f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_25c279ffd3952f707727035a3da4e463.setIcon(icon_cf27ff840b75d78c6ab736dcca7731f5);
+        
+    
+            marker_25c279ffd3952f707727035a3da4e463.bindTooltip(
+                `<div>
+                     厚岸湖・別寒辺牛湿原（あっけしこ・べかんべうししつげん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1dd7cf635d90edbcf3950a429ef24081 = L.circle(
+                [43.1084489765145, 144.847192078022],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_aa8e6b7afbd7fa10ca44c9a202dab986 = L.marker(
+                [42.6986197545883, 141.713832423848],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_783da7b6318932bb3567e1f04ec71097 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_aa8e6b7afbd7fa10ca44c9a202dab986.setIcon(icon_783da7b6318932bb3567e1f04ec71097);
+        
+    
+            marker_aa8e6b7afbd7fa10ca44c9a202dab986.bindTooltip(
+                `<div>
+                     ウトナイ湖（うとないこ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_bb3111e5309229f296af597ec6a591f7 = L.circle(
+                [42.6986197545883, 141.713832423848],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_547593068f54cd3945a941ac9cd28729 = L.marker(
+                [41.9851874494359, 140.672337281872],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_7d18a886d6ddcc9ddbff63f942f32b4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_547593068f54cd3945a941ac9cd28729.setIcon(icon_7d18a886d6ddcc9ddbff63f942f32b4e);
+        
+    
+            marker_547593068f54cd3945a941ac9cd28729.bindTooltip(
+                `<div>
+                     大沼（おおぬま）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_13d77995cd7a0a776aa68730df58586c = L.circle(
+                [41.9851874494359, 140.672337281872],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_d4f2bf321e2b333fdee7c0a37c729ba4 = L.marker(
+                [40.8207240832907, 141.38008276982],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_a24c13fc09073ab20903fc245a4fd3a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d4f2bf321e2b333fdee7c0a37c729ba4.setIcon(icon_a24c13fc09073ab20903fc245a4fd3a2);
+        
+    
+            marker_d4f2bf321e2b333fdee7c0a37c729ba4.bindTooltip(
+                `<div>
+                     仏沼（ほとけぬま）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_9b8209d3d9d9c2a50e2713c3ddb38ac8 = L.circle(
+                [40.8207240832907, 141.38008276982],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_f24b2d6b39450ea05332e135be5c2b5f = L.marker(
+                [38.7187585780945, 141.109478849157],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_b48cb8ef5a9646326a13963a16ceaefe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f24b2d6b39450ea05332e135be5c2b5f.setIcon(icon_b48cb8ef5a9646326a13963a16ceaefe);
+        
+    
+            marker_f24b2d6b39450ea05332e135be5c2b5f.bindTooltip(
+                `<div>
+                     伊豆沼・内沼（いずぬま・うちぬま）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3d9a04f970374352927c46e7bf2e4195 = L.circle(
+                [38.7187585780945, 141.109478849157],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_b570ab5149dc1cae2acc12d0a4429682 = L.marker(
+                [38.6472066742881, 141.447373299119],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_2125e2fe7dd70a985a37e4cda78d7318 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b570ab5149dc1cae2acc12d0a4429682.setIcon(icon_2125e2fe7dd70a985a37e4cda78d7318);
+        
+    
+            marker_b570ab5149dc1cae2acc12d0a4429682.bindTooltip(
+                `<div>
+                     志津川湾（しづがわわん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_04613082a2d4f09fa74f9c3d6ab8a843 = L.circle(
+                [38.6472066742881, 141.447373299119],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_cf3608a7387d65a2eac5aec1b308d558 = L.marker(
+                [38.6366806287911, 141.10247754153],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_84c1da6705fccc7fbbdf1ec9b8f4daca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_cf3608a7387d65a2eac5aec1b308d558.setIcon(icon_84c1da6705fccc7fbbdf1ec9b8f4daca);
+        
+    
+            marker_cf3608a7387d65a2eac5aec1b308d558.bindTooltip(
+                `<div>
+                     蕪栗沼・ 周辺水田（かぶくりぬま・しゅうへんすいでん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f897a825b863b87ca78bb608d297b6ea = L.circle(
+                [38.6366806287911, 141.10247754153],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_59a8c3c9a85b31f143b848a9aff2372f = L.marker(
+                [38.6318911880176, 140.962175384808],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_af891d0a54f4160b320aee71e202926a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_59a8c3c9a85b31f143b848a9aff2372f.setIcon(icon_af891d0a54f4160b320aee71e202926a);
+        
+    
+            marker_59a8c3c9a85b31f143b848a9aff2372f.bindTooltip(
+                `<div>
+                     化女沼（けじょぬま）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_52bbee5e37f0b90f65bd99afd719ea29 = L.circle(
+                [38.6318911880176, 140.962175384808],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_c17d9b9886cf08a31ca28cb5fec84b36 = L.marker(
+                [38.7537367979976, 139.757220251073],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_8fd42b4b5cee63b8c51682b8f6253f45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c17d9b9886cf08a31ca28cb5fec84b36.setIcon(icon_8fd42b4b5cee63b8c51682b8f6253f45);
+        
+    
+            marker_c17d9b9886cf08a31ca28cb5fec84b36.bindTooltip(
+                `<div>
+                     大山上池・下池（おおやまかみいけ・しもいけ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_50b6a8732cd33608f1895ba29503a821 = L.circle(
+                [38.7537367979976, 139.757220251073],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_957b178e6252ca86be8a95bb4dfb1198 = L.marker(
+                [36.9377827035544, 139.238736396899],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_070f240de4583ed3ae5e7937e292b529 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_957b178e6252ca86be8a95bb4dfb1198.setIcon(icon_070f240de4583ed3ae5e7937e292b529);
+        
+    
+            marker_957b178e6252ca86be8a95bb4dfb1198.bindTooltip(
+                `<div>
+                     尾瀬（おぜ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d88fc898694c66f8905b9195cee77c27 = L.circle(
+                [36.9377827035544, 139.238736396899],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_f231ad5792a46dbfdf33a15e4b4aff3d = L.marker(
+                [36.2760402059986, 140.504278658541],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_1697048cf214bcc2d3b2effa6c4b64b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f231ad5792a46dbfdf33a15e4b4aff3d.setIcon(icon_1697048cf214bcc2d3b2effa6c4b64b7);
+        
+    
+            marker_f231ad5792a46dbfdf33a15e4b4aff3d.bindTooltip(
+                `<div>
+                     涸沼（ひぬま）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e983943697d56f83a8ef60f595b01b12 = L.circle(
+                [36.2760402059986, 140.504278658541],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_b0199dc9d0f6c931c0401cff4a9a2154 = L.marker(
+                [36.2173340404802, 139.674502521924],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_158e14170322db77af9adeb4c4340d26 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b0199dc9d0f6c931c0401cff4a9a2154.setIcon(icon_158e14170322db77af9adeb4c4340d26);
+        
+    
+            marker_b0199dc9d0f6c931c0401cff4a9a2154.bindTooltip(
+                `<div>
+                     渡良瀬遊水地（わたらせゆうすいち）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_9ed74a57bcce427f7d4ca9c66070a917 = L.circle(
+                [36.2173340404802, 139.674502521924],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_63a1712e49263d945dce77c25a8d590b = L.marker(
+                [36.7655181118928, 139.441402842108],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_32821d17f234cf4b96885840152e0aba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_63a1712e49263d945dce77c25a8d590b.setIcon(icon_32821d17f234cf4b96885840152e0aba);
+        
+    
+            marker_63a1712e49263d945dce77c25a8d590b.bindTooltip(
+                `<div>
+                     奥日光の湿原（おくにっこうのしつげん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d3b76a21873b16b1aa62e6aa70995362 = L.circle(
+                [36.7655181118928, 139.441402842108],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_dead6a5fcbdd300b6a58c2bc5d794b35 = L.marker(
+                [36.6552919964124, 138.548379231681],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_a87780d5feda158cf0349231dbfd767f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_dead6a5fcbdd300b6a58c2bc5d794b35.setIcon(icon_a87780d5feda158cf0349231dbfd767f);
+        
+    
+            marker_dead6a5fcbdd300b6a58c2bc5d794b35.bindTooltip(
+                `<div>
+                     芳ヶ平湿地群（よしがだいらしっちぐん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_973e51353df2f99582ecd31be3983731 = L.circle(
+                [36.6552919964124, 138.548379231681],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_3e9d7483333ed27ee3be14ea62acbb21 = L.marker(
+                [35.6784599880402, 140.006776030528],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_0c1956d91a9808a0e817e9652fcaa676 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3e9d7483333ed27ee3be14ea62acbb21.setIcon(icon_0c1956d91a9808a0e817e9652fcaa676);
+        
+    
+            marker_3e9d7483333ed27ee3be14ea62acbb21.bindTooltip(
+                `<div>
+                     谷津干潟（やつひがた）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2fc1eb93dffd0744d618741c39ecbc73 = L.circle(
+                [35.6784599880402, 140.006776030528],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_cb3e0c0cbfd4b834e6a44ce21f405d77 = L.marker(
+                [35.6383917513995, 139.855808249742],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_c3d97c8327fca54b4cde1429f5b3700d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_cb3e0c0cbfd4b834e6a44ce21f405d77.setIcon(icon_c3d97c8327fca54b4cde1429f5b3700d);
+        
+    
+            marker_cb3e0c0cbfd4b834e6a44ce21f405d77.bindTooltip(
+                `<div>
+                     葛西海浜公園（かさいかいひんこうえん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f60e48a60bdabadc0a1fe450533ab030 = L.circle(
+                [35.6383917513995, 139.855808249742],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_ad6e5665fdf04cb5ee1aa5dfd40c9841 = L.marker(
+                [37.8385892101694, 139.237040708276],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_446e1c19144df19b7ea33a6b2a76f998 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ad6e5665fdf04cb5ee1aa5dfd40c9841.setIcon(icon_446e1c19144df19b7ea33a6b2a76f998);
+        
+    
+            marker_ad6e5665fdf04cb5ee1aa5dfd40c9841.bindTooltip(
+                `<div>
+                     瓢湖（ひょうこ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_ee0865c17b898418c76b55c84831c717 = L.circle(
+                [37.8385892101694, 139.237040708276],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_4197f6e2162ef503904d8eb5887469e3 = L.marker(
+                [37.8164468392201, 138.874858485177],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_8185126b3ba561f746da922416d37035 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4197f6e2162ef503904d8eb5887469e3.setIcon(icon_8185126b3ba561f746da922416d37035);
+        
+    
+            marker_4197f6e2162ef503904d8eb5887469e3.bindTooltip(
+                `<div>
+                     佐潟（さかた）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f93b08f5f4b4b549a10b1dddf0a89031 = L.circle(
+                [37.8164468392201, 138.874858485177],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_3ec7d687d0d2f294b51ae8c846d2d40b = L.marker(
+                [36.569294445156, 137.554725269359],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_75d1a2c5013c6ed943219b9bb856956d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3ec7d687d0d2f294b51ae8c846d2d40b.setIcon(icon_75d1a2c5013c6ed943219b9bb856956d);
+        
+    
+            marker_3ec7d687d0d2f294b51ae8c846d2d40b.bindTooltip(
+                `<div>
+                     立山弥陀ヶ原・大日平（たてやまみだがはら・だいにちだいら）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_f6615fbd7eb2d211ca6276293307bdd8 = L.circle(
+                [36.569294445156, 137.554725269359],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_12c97c43bea1d1a8af979dd3b741d779 = L.marker(
+                [36.3218154248268, 136.289372686074],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_1bcb6492e12371bbc16bda3cbe141227 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_12c97c43bea1d1a8af979dd3b741d779.setIcon(icon_1bcb6492e12371bbc16bda3cbe141227);
+        
+    
+            marker_12c97c43bea1d1a8af979dd3b741d779.bindTooltip(
+                `<div>
+                     片野鴨池（かたのかもいけ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_fb5a474d43b2c588be3bbbecd34401b3 = L.circle(
+                [36.3218154248268, 136.289372686074],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_842d2d2d216bada68e9722dbea42be4d = L.marker(
+                [35.6597714350909, 136.088505800025],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_3d008a18297e86ae6f38d93cbe3ccc73 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_842d2d2d216bada68e9722dbea42be4d.setIcon(icon_3d008a18297e86ae6f38d93cbe3ccc73);
+        
+    
+            marker_842d2d2d216bada68e9722dbea42be4d.bindTooltip(
+                `<div>
+                     中池見湿地（なかいけみしっち）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_deafdeb7281486543befa34647ee66b0 = L.circle(
+                [35.6597714350909, 136.088505800025],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_dcdbef0fb86e2fd1666a915186ebc46d = L.marker(
+                [35.568089043412, 135.88223646875],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_9dc28ab0e3c5b9cbc464aa636d643af6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_dcdbef0fb86e2fd1666a915186ebc46d.setIcon(icon_9dc28ab0e3c5b9cbc464aa636d643af6);
+        
+    
+            marker_dcdbef0fb86e2fd1666a915186ebc46d.bindTooltip(
+                `<div>
+                     三方五湖（みかたごこ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_71a9e1278d5b1c1f57014f8d1a2deae6 = L.circle(
+                [35.568089043412, 135.88223646875],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_5b381b347abeaa73578adbddbb91bbf1 = L.marker(
+                [35.082709934909, 136.8445683138],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_460cfeb8e317574b03a11ba4e7f50f31 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5b381b347abeaa73578adbddbb91bbf1.setIcon(icon_460cfeb8e317574b03a11ba4e7f50f31);
+        
+    
+            marker_5b381b347abeaa73578adbddbb91bbf1.bindTooltip(
+                `<div>
+                     藤前干潟（ふじまえひがた）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1b44c831cc6a11549bde92dca97f0df9 = L.circle(
+                [35.082709934909, 136.8445683138],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_07ae95ecce3ac8c7206c6ecb7db1c51b = L.marker(
+                [35.0876993735688, 137.217951955151],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_bc12a95d318bbe95ed842ffc0a3b32d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_07ae95ecce3ac8c7206c6ecb7db1c51b.setIcon(icon_bc12a95d318bbe95ed842ffc0a3b32d7);
+        
+    
+            marker_07ae95ecce3ac8c7206c6ecb7db1c51b.bindTooltip(
+                `<div>
+                     東海丘陵湧水湿地群（とうかいきゅうりょうゆうすいしっちぐん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_9bd94b5e415b716ec9c34a0e9bf00b9e = L.circle(
+                [35.0876993735688, 137.217951955151],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_5198dd6099605491cd8e182e93adf0ff = L.marker(
+                [35.2938338715561, 136.122393273442],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_6581a9b395f50ca35f11205893b0f066 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5198dd6099605491cd8e182e93adf0ff.setIcon(icon_6581a9b395f50ca35f11205893b0f066);
+        
+    
+            marker_5198dd6099605491cd8e182e93adf0ff.bindTooltip(
+                `<div>
+                     琵琶湖（びわこ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e2fcec663a4e22175bb80776467afecc = L.circle(
+                [35.2938338715561, 136.122393273442],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_84897706eb53ebe107a1a48f753862a1 = L.marker(
+                [35.5358437442181, 134.826199848847],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_6cb1d3a92a2d69a15bc804109bf92daf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_84897706eb53ebe107a1a48f753862a1.setIcon(icon_6cb1d3a92a2d69a15bc804109bf92daf);
+        
+    
+            marker_84897706eb53ebe107a1a48f753862a1.bindTooltip(
+                `<div>
+                     円山川下流域・周辺水田（まるやまがわかりゅういき・しゅうへんすいでん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3f83062d7fff69fe9b05d8ac4990d84f = L.circle(
+                [35.5358437442181, 134.826199848847],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_1f0de19dadc6e9be79a8188bc2d6da3f = L.marker(
+                [33.4666906360961, 135.745438344196],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_440ed0cbda644dc02099bc353c1bb808 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1f0de19dadc6e9be79a8188bc2d6da3f.setIcon(icon_440ed0cbda644dc02099bc353c1bb808);
+        
+    
+            marker_1f0de19dadc6e9be79a8188bc2d6da3f.bindTooltip(
+                `<div>
+                     串本沿岸海域（くしもとえんがんかいいき）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d51dce3cad11f0aeff7b18a42d43d6a2 = L.circle(
+                [33.4666906360961, 135.745438344196],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_160465ba343a8825b79394771fae97b6 = L.marker(
+                [35.4700415233304, 133.202798811265],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_5ef2a10d0d11b0cb6d8a114800d07e3e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_160465ba343a8825b79394771fae97b6.setIcon(icon_5ef2a10d0d11b0cb6d8a114800d07e3e);
+        
+    
+            marker_160465ba343a8825b79394771fae97b6.bindTooltip(
+                `<div>
+                     中海（なかうみ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_39ce587d162d272c2b078c551f4f6742 = L.circle(
+                [35.4700415233304, 133.202798811265],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_6ee5cbfc32c163a40fd69d4612992daa = L.marker(
+                [35.4468987776833, 132.958516322337],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_7110fcc74beadfb2cdbcf20a57b2faf2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6ee5cbfc32c163a40fd69d4612992daa.setIcon(icon_7110fcc74beadfb2cdbcf20a57b2faf2);
+        
+    
+            marker_6ee5cbfc32c163a40fd69d4612992daa.bindTooltip(
+                `<div>
+                     宍道湖（しんじこ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_80a6abe246450cf7e9a88a03b5a8df18 = L.circle(
+                [35.4468987776833, 132.958516322337],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_8609a10a6decaf6b8474687c94463b2d = L.marker(
+                [34.2381844530419, 132.281513679109],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_f18278a72b1986e6f5a0826dd18aeac5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8609a10a6decaf6b8474687c94463b2d.setIcon(icon_f18278a72b1986e6f5a0826dd18aeac5);
+        
+    
+            marker_8609a10a6decaf6b8474687c94463b2d.bindTooltip(
+                `<div>
+                     宮島（みやじま）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e31bb68186a2e25d8b9028b6ed2c8dc2 = L.circle(
+                [34.2381844530419, 132.281513679109],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_e35dc4b50abfa0a32b22651cab554210 = L.marker(
+                [34.2542324921337, 131.304382673063],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_a324e8a39d67ad7692ae4a7b56d5840b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e35dc4b50abfa0a32b22651cab554210.setIcon(icon_a324e8a39d67ad7692ae4a7b56d5840b);
+        
+    
+            marker_e35dc4b50abfa0a32b22651cab554210.bindTooltip(
+                `<div>
+                     秋吉台地下水系（あきよしだいちかすいけい）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a2e7f68e5a2e87b3a9ee412e8e358477 = L.circle(
+                [34.2542324921337, 131.304382673063],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_5516d1f62f983e190e2057202a17c8e7 = L.marker(
+                [33.1741162331173, 130.270406871245],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_1f718e5e0c974bf98386524fcb537e54 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5516d1f62f983e190e2057202a17c8e7.setIcon(icon_1f718e5e0c974bf98386524fcb537e54);
+        
+    
+            marker_5516d1f62f983e190e2057202a17c8e7.bindTooltip(
+                `<div>
+                     東よか干潟（ひがしよかひがた）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8b9c146f5f7d937dc152361d38a06101 = L.circle(
+                [33.1741162331173, 130.270406871245],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_54db43f604c7ebe60033d29135daa896 = L.marker(
+                [33.1092244438995, 130.128178196848],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_46cb0bbf69ce545aa90eed064f723237 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_54db43f604c7ebe60033d29135daa896.setIcon(icon_46cb0bbf69ce545aa90eed064f723237);
+        
+    
+            marker_54db43f604c7ebe60033d29135daa896.bindTooltip(
+                `<div>
+                     肥前鹿島干潟（ひぜんかしまひがた）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6db265289aedb94bb488b0863f398b65 = L.circle(
+                [33.1092244438995, 130.128178196848],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_7f43de576f35a16bfa401d4fefdc5545 = L.marker(
+                [32.9643673136567, 130.430754656369],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_218bec73959f71a71dc97a987c6d426d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7f43de576f35a16bfa401d4fefdc5545.setIcon(icon_218bec73959f71a71dc97a987c6d426d);
+        
+    
+            marker_7f43de576f35a16bfa401d4fefdc5545.bindTooltip(
+                `<div>
+                     荒尾干潟（あらおひがた）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_bd98517724304fa91faa905525b1adef = L.circle(
+                [32.9643673136567, 130.430754656369],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_68a20d4bcf95a737b68fba3d98cec424 = L.marker(
+                [33.1025092558256, 131.260577208581],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_7bd0cdd7e4ae377a8f71f6239696b940 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_68a20d4bcf95a737b68fba3d98cec424.setIcon(icon_7bd0cdd7e4ae377a8f71f6239696b940);
+        
+    
+            marker_68a20d4bcf95a737b68fba3d98cec424.bindTooltip(
+                `<div>
+                     くじゅう坊ガツル ・タデ原湿原（くじゅうぼうがつる・たでわらしつげん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1217e100b8b019dd5960fe132962eaac = L.circle(
+                [33.1025092558256, 131.260577208581],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_77b92ba745e6343141de9f837b0aab41 = L.marker(
+                [32.1051174805599, 130.29749166084],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_e9c2fb0977463f4b28e730ee50a412a6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_77b92ba745e6343141de9f837b0aab41.setIcon(icon_e9c2fb0977463f4b28e730ee50a412a6);
+        
+    
+            marker_77b92ba745e6343141de9f837b0aab41.bindTooltip(
+                `<div>
+                     出水ツルの越冬地（いずみつるのえっとうち）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_09f77e5421384abebc241a4229c672c2 = L.circle(
+                [32.1051174805599, 130.29749166084],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_efa55cdb813435b908a544236d9afb42 = L.marker(
+                [31.817780963534, 130.468307510157],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_e3942f5f81501c77256ea68b7b6a00c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_efa55cdb813435b908a544236d9afb42.setIcon(icon_e3942f5f81501c77256ea68b7b6a00c6);
+        
+    
+            marker_efa55cdb813435b908a544236d9afb42.bindTooltip(
+                `<div>
+                     藺牟田池（いむたいけ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5c406adc536da18574e2383cde2ed6fa = L.circle(
+                [31.817780963534, 130.468307510157],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_c142a08ce056f14d9f861988ba98c768 = L.marker(
+                [30.4089067461964, 130.431726438117],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_66fbde4bfb2b6738606eb1acd314dafe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c142a08ce056f14d9f861988ba98c768.setIcon(icon_66fbde4bfb2b6738606eb1acd314dafe);
+        
+    
+            marker_c142a08ce056f14d9f861988ba98c768.bindTooltip(
+                `<div>
+                     屋久島永田浜（やくしまながたはま）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6f5eae36cc391e68dd1f8c7dbad5ef3e = L.circle(
+                [30.4089067461964, 130.431726438117],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_9eb0886fba26968f1efa4d207427068f = L.marker(
+                [26.3575233923282, 126.772296431035],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_164cf68852084cae129b3a1da1372a9f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9eb0886fba26968f1efa4d207427068f.setIcon(icon_164cf68852084cae129b3a1da1372a9f);
+        
+    
+            marker_9eb0886fba26968f1efa4d207427068f.bindTooltip(
+                `<div>
+                     久米島の渓流・湿地（くめじまのけいりゅう・しっち）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_aa2046206cf38b150e733c309933603e = L.circle(
+                [26.3575233923282, 126.772296431035],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_04cccc487af3a0d2ad496d8a920f63d1 = L.marker(
+                [26.2076990823699, 127.371093239373],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_f7183264f3f730f3fb900226432fa2fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_04cccc487af3a0d2ad496d8a920f63d1.setIcon(icon_f7183264f3f730f3fb900226432fa2fb);
+        
+    
+            marker_04cccc487af3a0d2ad496d8a920f63d1.bindTooltip(
+                `<div>
+                     慶良間諸島海域（けらましょとうかいいき）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_75ddf17da0b0a1d2d018f8e0dc0ee9f4 = L.circle(
+                [26.2076990823699, 127.371093239373],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_39c9c50463de3cb925f742a5fa2c78ae = L.marker(
+                [26.1961636003083, 127.684146401648],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_10ad85e73f920ec13de8b95558cdb33d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_39c9c50463de3cb925f742a5fa2c78ae.setIcon(icon_10ad85e73f920ec13de8b95558cdb33d);
+        
+    
+            marker_39c9c50463de3cb925f742a5fa2c78ae.bindTooltip(
+                `<div>
+                     漫湖（まんこ）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c2f791b509555d1044bcb1d881546761 = L.circle(
+                [26.1961636003083, 127.684146401648],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_b3efcd8ff6a975cc25af368992d928c6 = L.marker(
+                [24.7605656989252, 125.273766587092],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_81a8b034e301db33c21450c253dce268 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b3efcd8ff6a975cc25af368992d928c6.setIcon(icon_81a8b034e301db33c21450c253dce268);
+        
+    
+            marker_b3efcd8ff6a975cc25af368992d928c6.bindTooltip(
+                `<div>
+                     与那覇湾（よなはわん）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e2f6a10c7012d55dd6a719f9c08d7bbb = L.circle(
+                [24.7605656989252, 125.273766587092],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_f1a7661debd8eaa8051a0080206f9c50 = L.marker(
+                [24.4014519057462, 124.142250556138],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_96edcf861f27b48e988f2c96ed99f42f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f1a7661debd8eaa8051a0080206f9c50.setIcon(icon_96edcf861f27b48e988f2c96ed99f42f);
+        
+    
+            marker_f1a7661debd8eaa8051a0080206f9c50.bindTooltip(
+                `<div>
+                     名蔵アンパル（なぐらあんぱる）
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6f624aab01230723f47d71511a52e1ba = L.circle(
+                [24.4014519057462, 124.142250556138],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var marker_8962223b9a74753eea00099943b3f5c3 = L.marker(
+                [35.6870627124923, 139.767056871164],
+                {}
+            ).addTo(map_60ecfd8fdb700f6fc2db33787dd3abb1);
+        
+    
+            var icon_d1f54b7d3f7f464d522e562a88093400 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8962223b9a74753eea00099943b3f5c3.setIcon(icon_d1f54b7d3f7f464d522e562a88093400);
+        
+    
+            marker_8962223b9a74753eea00099943b3f5c3.bindTooltip(
+                `<div>
+                     大手町プレイスウエストタワー
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
